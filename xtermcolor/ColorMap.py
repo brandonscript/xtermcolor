@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 class TerminalColorMapException(Exception):
     pass
 
@@ -26,8 +28,8 @@ class TerminalColorMap:
 
     def colorize(self, string, rgb=None, ansi=None, bg=None, ansi_bg=None):
         '''Returns the colored string'''
-        if not isinstance(string, str):
-            string = str(string)
+        if not isinstance(string, unicode):
+            string = unicode(string)
         if rgb is None and ansi is None:
             raise TerminalColorMapException(
                 'colorize: must specify one named parameter: rgb or ansi')

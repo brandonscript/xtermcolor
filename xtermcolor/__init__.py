@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 from os import isatty, environ, write
 
 from xtermcolor.ColorMap import XTermColorMap, VT100ColorMap
